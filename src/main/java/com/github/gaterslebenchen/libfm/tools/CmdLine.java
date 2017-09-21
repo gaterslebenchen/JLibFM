@@ -187,22 +187,9 @@ public class CmdLine {
 				System.out.print(" ");
 			}
 			String helpstr = help.get(key);
-			while(helpstr.length()>0)
+			if(helpstr.length()>0)
 			{
-				if (helpstr.length() > (72-16)) {
-					int p = helpstr.substring(0, 72-16).lastIndexOf(" \t");
-					if (p == 0) {
-						p = 72-16;
-					}
-					System.out.println(helpstr.substring(0, p));
-					helpstr = helpstr.substring(p+1, helpstr.length()-p);            
-				} else {
-					System.out.println(helpstr);
-					helpstr = "";  
-				}
-				if (helpstr.length() > 0) {
-					for (int i=0; i < 16; i++) { System.out.print(" "); }
-				}
+				System.out.println(helpstr); 
 			}
 		}
 	}

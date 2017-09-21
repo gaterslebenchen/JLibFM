@@ -164,7 +164,7 @@ public class Main {
 		FmModel fm = new FmModel();
 		{
 			fm.num_attribute = num_all_attribute;
-			fm.initstdev = cmdline.getValue(param_init_stdev, 0.1);
+			fm.initstdev = cmdline.getValue(param_init_stdev, 0.1d);
 			// set the number of dimensions in the factorization
 			{
 				Integer[] dim = cmdline.getIntValues(param_dim);
